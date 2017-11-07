@@ -1,4 +1,9 @@
 ====================================================================================================================================
 EJERCICIOS
 ====================================================================================================================================
-1. 
+1.
+FINDLAST -> El fallo es que a la hora de buscar en el array, busca desde la ultima posicion hacia delante. El fallo, es que el bucle
+al acabar de buscar no encuentra el numero si esta en la primera posicion del array.
+Para solucionarlo-> i <= 0.
+
+LASTZERO ->
