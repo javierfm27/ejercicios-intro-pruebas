@@ -1,9 +1,86 @@
 ====================================================================================================================================
 EJERCICIOS
 ====================================================================================================================================
-1.
-FINDLAST -> El fallo es que a la hora de buscar en el array, busca desde la ultima posicion hacia delante. El fallo, es que el bucle
+FINDLAST ->
+1.El fallo es que a la hora de buscar en el array, busca desde la ultima posicion hacia delante. El fallo, es que el bucle
 al acabar de buscar no encuentra el numero si esta en la primera posicion del array.
 Para solucionarlo-> i <= 0.
 
-LASTZERO ->
+2.
+Una prueba que haga que no ejecute el fallo, es el de dar un array de cero elementos, es decir:
+java FindLast
+Usage: java FindLast v1 [v2] [v3] ...
+
+3.
+Una prueba seria introducir el numero que se quiere buscar, sabiendo que esta en primera posicion.
+java FindLast 0 1 2 3 4
+Enter an integer you want to find:
+0
+The index of the last element equal to 0 is: -1
+
+6.
+Las pruebas del codigo serian:
+@Test public void lastOccurrenceInFirstElement()
+{
+   int arr[] = {2, 3, 5};
+   int y = 2;
+   assertEquals("Last occurence in first element", 0, FindLast.findLast(arr, y));
+}
+
+@Test public void OccurenceInTheMiddle()
+{
+  int arr[] = {2,3,5};
+  int y = 3;
+  assertEquals("Occurence in the Middle", 1, FindLast.findLast(arr, y));
+}
+
+@Test public void lastOccurrenceInLastElement()
+{
+  int arr[] = {2,3,5};
+  int y = 5;
+  assertEquals("Last occurence in last element",2, FindLast.findLast(arr, y));
+}
+
+===============================
+COUNTPOSITIVE
+===============================
+1.
+El error en el codigo, es que a la hora de ver que numero es mayor que cero, la sentencia es que cuenta un numero Positivo si es
+mayor o igual que cero
+
+2.
+La unica manera de no ejecutar el codigo del fallo, es la de no introducir ningun array, es decir un array sin elementos
+
+3.
+La manera de ejecutar el codigo, y hacer que no provoque un error en el estado, es la de introducir un array que no contenga
+ningun zero
+
+4.
+No es posible, ya que para provocar el fallo hay que introducir zeros en el array, y esto siempre provocara un cambio en la salide
+del programa
+
+6.
+Para corregir el codigo, cambiamos la setencia:
+  x[i] >= 0 --------------> x[i] > 0
+
+===============================
+LastZero
+==============================
+1.
+El error en el codigo, es que cuando vamos a buscar la ultima posicion del cero en el array, en cuanto encuentra el primero, este
+programa acaba, dando la primera posicion
+
+2.
+La unica manera de no ejecutar el codigo del fallo, es introducir un array que no contenga ningun cero
+
+3.
+No hay manera, ya que para ello hay que introducir un cero
+
+4.
+No es posible, ya que para provocar el fallo hay que introducir zeros en el array, y esto siempre provocara un cambio en la salide
+del programa
+
+================================
+OddOrPos
+===============================
+1.

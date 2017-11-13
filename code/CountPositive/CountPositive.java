@@ -1,6 +1,6 @@
 public class CountPositive
 {
-  /** 
+  /**
    * Counts positive elements in array
    *
    * @param x array to search
@@ -10,19 +10,19 @@ public class CountPositive
    public static int countPositive (int[] x)
    {
       int count = 0;
-   
+
       for (int i=0; i < x.length; i++)
       {
-         if (x[i] >= 0)
+         if (x[i] > 0)
          {
             count++;
          }
       }
       return count;
    }
-      // test:  x=[-4, 2, 0, 2]             
+      // test:  x=[-4, 2, 0, 2]
       //        Expected = 2
-   
+
    public static void main (String []argv)
    {  // Driver method for countPositive
       // Read an array from standard input, call countPositive()
@@ -32,7 +32,7 @@ public class CountPositive
          System.out.println ("Usage: java CountPositive v1 [v2] [v3] ... ");
          return;
       }
-   
+
       for (int i = 0; i< argv.length; i++)
       {
          try
@@ -45,7 +45,7 @@ public class CountPositive
             inArr [i] = 1;
          }
       }
-   
+
       System.out.println ("Number of positive numbers is: " + countPositive (inArr));
    }
 }
